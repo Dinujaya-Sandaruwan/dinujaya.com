@@ -1,0 +1,178 @@
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 1122px)";
+$media-mobile: "only screen and (max-width : 982px)";
+$media-mobile-sm: "only screen and (max-width : 480px)";
+
+.landing {
+  display: flex;
+  //   display: none;
+  .layout-text {
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    width: 55vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .my-text {
+      text-align: left;
+      width: 80%;
+      // border: 2px solid green;
+
+      .hi {
+        // text-align: left;
+        color: gray;
+        font-size: 2.5rem;
+        font-family: "Ubuntu", sans-serif;
+        margin-left: -15px;
+        animation-delay: 1000ms;
+      }
+      .name {
+        font-size: 4rem;
+        animation-delay: 1500ms;
+      }
+
+      p {
+        margin-top: 20px;
+        text-align: justify;
+        animation-delay: 2000ms;
+      }
+
+      .technologies-text {
+        margin-top: 10px;
+        font-size: 20px;
+        animation-delay: 2500ms;
+
+        span {
+          color: rgb(248, 118, 118);
+        }
+      }
+
+      .landing-buttons {
+        margin-top: 40px;
+        display: flex;
+
+        a {
+          text-decoration: none;
+        }
+        button {
+          width: 16vw;
+          height: 40px;
+          background: transparent;
+          border: 3px solid white;
+          border-radius: 5px;
+          color: rgb(248, 118, 118);
+          font-size: 17px;
+          margin: 10px;
+          cursor: pointer;
+          transition: all 0.35s ease-in-out;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .landing-btn-icon {
+            margin-right: 5px;
+          }
+        }
+        .btn-learn {
+          animation-delay: 3000ms;
+          border: 3px solid rgb(248, 118, 118);
+          background-color: rgb(248, 118, 118);
+          color: white;
+        }
+
+        .btn-order {
+          animation-delay: 3500ms;
+          border: 3px solid rgb(248, 118, 118);
+        }
+
+        .btn-learn:hover {
+          background-color: rgb(224, 68, 68);
+          border: 3px solid rgb(224, 68, 68);
+        }
+
+        .btn-order:hover {
+          background-color: rgb(224, 68, 68);
+          border: 3px solid rgb(224, 68, 68);
+          color: white;
+        }
+      }
+    }
+
+    @media #{$media-tablet} {
+      .my-text {
+        text-align: left;
+        width: 80%;
+        // border: 2px solid green;
+
+        .hi {
+          // text-align: left;
+          color: gray;
+          font-size: 2rem;
+          margin-left: -20px;
+        }
+        .name {
+          font-size: 3rem;
+        }
+
+        p {
+          margin-top: 20px;
+          // text-align: center;
+          font-size: 15px;
+        }
+
+        .technologies-text {
+          font-size: 18px;
+        }
+
+        .landing-buttons {
+          margin-top: 10px;
+          display: flex;
+          justify-content: center;
+          button {
+            width: 40vw;
+          }
+        }
+      }
+    }
+
+    // border: 2px solid red;
+  }
+  .layout-image {
+    height: 100vh;
+    width: 45vw;
+
+    img {
+      height: 100vh;
+    }
+  }
+
+  @media #{$media-mobile} {
+    flex-direction: column;
+    align-items: center;
+
+    .layout-text {
+      width: 100%;
+      margin-top: 35px;
+      height: auto;
+
+      .my-text {
+        .name {
+          font-size: 2.5rem;
+        }
+      }
+
+      // border: 2px solid red;
+    }
+
+    .layout-image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+  }
+}

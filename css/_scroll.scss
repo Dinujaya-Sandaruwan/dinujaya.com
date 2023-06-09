@@ -1,0 +1,29 @@
+// /* WebKit (Chrome, Safari, Opera) */
+// ::-webkit-scrollbar {
+//     width: 10px;
+//     background: transparent;
+//   }
+
+//   ::-webkit-scrollbar-thumb {
+//     background: white;
+//   }
+
+//   /* Mozilla Firefox */
+//   /* Note: Firefox supports only the width and background properties for scrollbar styling */
+//   /* The thumb color will be the same as the browser's native theme */
+//   /* The background property sets the background color for the scrollbar track */
+
+//   /* Set a transparent background for the scrollbar track */
+//   html {
+//     scrollbar-color: transparent white;
+//     scrollbar-width: thin;
+//   }
+
+//   /* Microsoft Edge and Internet Explorer */
+//   /* Note: Microsoft Edge and Internet Explorer support only the color property for scrollbar styling */
+
+//   /* Set a transparent background for the scrollbar track */
+//   body {
+//     scrollbar-face-color: white;
+//     scrollbar-base-color: transparent;
+//   }
