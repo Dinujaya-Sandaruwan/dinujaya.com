@@ -1,3 +1,49 @@
-// ::-webkit-scrollbar {
-//   width: 5px;
-// }
+/* Webkit (Safari, Chrome, Opera) */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orange;
+}
+
+/* Firefox */
+::-moz-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: orange;
+}
+
+/* Internet Explorer and Edge */
+/* Note: Scrollbar styling is limited in these browsers */
+/* You can only change the color using the -ms- prefixed property */
+/* Transparent background is not supported */
+*::-ms-scrollbar {
+  width: 10px;
+}
+
+*::-ms-scrollbar-thumb {
+  background-color: orange;
+}
+
+/* Standard scrollbar styling */
+/* This will apply to browsers that don't support vendor prefixes */
+/* It's a good idea to include this as a fallback */
+/* However, keep in mind that it may not have the same effect on all browsers */
+/* Also, note that this will not work on Safari, which requires the Webkit prefix */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: orange transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: orange;
+}

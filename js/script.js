@@ -62,15 +62,13 @@ const scrollAnimation = (
 
 scrollAnimation("fade-in-bottom", "fade-out-bottom", "animatedElement");
 scrollAnimation("fade-in-bottom", "fade-out-bottom", "toolkitImage");
+scrollAnimation("flicker-in-1", "fade-out-bottom", "wanna-know");
 
 const scrollToAbout = () => {
   document.getElementById("landingText").classList.add("slide-out-bottom");
   document.getElementById("landingImage").classList.add("slide-out-bottom");
   setTimeout(() => {
-    document.getElementById("tow").scrollIntoView({
-      // behavior: "smooth",
-      block: "start",
-    });
+    document.getElementById("one").style.display = "none";
   }, 1000);
   setTimeout(() => {
     document.getElementById("landingText").classList.remove("slide-out-bottom");
@@ -83,26 +81,44 @@ const scrollToAbout = () => {
   document.getElementById("aboutRight").classList.add("bounce-in-right");
 };
 
+// For Peragraph
+
 // About Typing
-// var element = document.getElementById("pera");
-// var content = element.innerHTML;
-// element.innerHTML = "";
+const aboutTyping = (id) => {
+  let element = document.getElementById(id);
+  element.style.display = "block";
+  let content = element.innerHTML;
+  element.innerHTML = "";
 
-// var i = 0;
-// var typingInterval = setInterval(function () {
-//   if (i < content.length) {
-//     element.innerHTML += content.charAt(i);
-//     i++;
+  document.getElementById("wannaKnow").style.display = "none";
 
-//     // Check for <br> tags and add a line break
-//     if (content.charAt(i) === "<" && content.substring(i, i + 4) === "<br>") {
-//       element.innerHTML += "<br> <br>";
-//       i += 4;
-//     }
-//   } else {
-//     clearInterval(typingInterval);
-//   }
-// }, 50);
+  let i = 0;
+  let typingInterval = setInterval(function () {
+    if (i < content.length) {
+      element.innerHTML += content.charAt(i);
+      i++;
+
+      // Check for <br> tags and add a line break
+      if (content.charAt(i) === "<" && content.substring(i, i + 4) === "<br>") {
+        element.innerHTML += "<br> <br>";
+        i += 4;
+      }
+    } else {
+      clearInterval(typingInterval);
+      document.getElementById("wannaKnow2").style.display = "flex"; // Set display none after typing animation
+    }
+  }, 20);
+};
+
+// Scroll to Project Page
+const scrollProjects = () => {
+  document.getElementById("aboutLeft").classList.add("slide-out-left");
+  document.getElementById("aboutRight").classList.add("slide-out-right");
+
+  setTimeout(() => {
+    document.getElementById("tow").style.display = "none";
+  }, 1000);
+};
 
 // Function to disable mouse scroll wheel
 function disableScrollWheel(event) {
