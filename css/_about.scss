@@ -40,6 +40,8 @@ $media-mobile-sm: "only screen and (max-width : 600px)";
       margin-top: 5vh;
       font-size: 5rem;
       font-weight: 800;
+
+      animation-delay: 2.2s;
     }
 
     p.about-pera {
@@ -49,27 +51,31 @@ $media-mobile-sm: "only screen and (max-width : 600px)";
       color: rgb(71, 71, 71);
     }
 
-    span {
-      display: flex;
-      align-items: center;
-      margin-top: 2vh;
+    div {
+      animation-delay: 2.3s;
+      height: auto;
+      width: 100%;
+      span {
+        display: flex;
+        align-items: center;
+        margin-top: 2vh;
 
-      .toolkit-title {
-        font-size: 1.2rem;
+        .toolkit-title {
+          font-size: 1.2rem;
+        }
+
+        .icon {
+          margin-right: 5px;
+          font-size: 1.3rem;
+          transform: rotate(-45deg);
+        }
       }
 
-      .icon {
-        margin-right: 5px;
-        font-size: 1.3rem;
-        transform: rotate(-45deg);
+      hr {
+        color: gray;
+        margin: 5px 0px 5px 0px;
       }
     }
-
-    hr {
-      color: gray;
-      margin: 5px 0px 5px 0px;
-    }
-
     .my-toolkit {
       display: flex;
       flex-wrap: wrap;
@@ -83,17 +89,19 @@ $media-mobile-sm: "only screen and (max-width : 600px)";
         height: auto;
         margin: 5px;
         transition-duration: 300ms;
+        filter: grayscale(50%);
       }
 
       a {
         @for $i from 1 through 40 {
           &:nth-child(#{$i}) {
-            animation-delay: (200ms * ($i - 1) + 1s);
+            animation-delay: (200ms * ($i - 1) + 2.5s);
           }
         }
       }
       img:hover {
         transform: scale(1.1);
+        filter: grayscale(0%);
       }
     }
   }

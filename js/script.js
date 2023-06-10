@@ -61,33 +61,65 @@ const scrollAnimation = (
 };
 
 scrollAnimation("fade-in-bottom", "fade-out-bottom", "animatedElement");
+scrollAnimation("fade-in-bottom", "fade-out-bottom", "toolkitImage");
+
+const scrollToAbout = () => {
+  document.getElementById("landingText").classList.add("slide-out-bottom");
+  document.getElementById("landingImage").classList.add("slide-out-bottom");
+  setTimeout(() => {
+    document.getElementById("tow").scrollIntoView({
+      // behavior: "smooth",
+      block: "start",
+    });
+  }, 1000);
+  setTimeout(() => {
+    document.getElementById("landingText").classList.remove("slide-out-bottom");
+    document
+      .getElementById("landingImage")
+      .classList.remove("slide-out-bottom");
+  }, 2000);
+
+  document.getElementById("aboutLeft").classList.add("bounce-in-left");
+  document.getElementById("aboutRight").classList.add("bounce-in-right");
+};
 
 // About Typing
-var element = document.getElementById("pera");
-var content = element.innerHTML;
-element.innerHTML = "";
+// var element = document.getElementById("pera");
+// var content = element.innerHTML;
+// element.innerHTML = "";
 
-var i = 0;
-var typingInterval = setInterval(function () {
-  if (i < content.length) {
-    element.innerHTML += content.charAt(i);
-    i++;
+// var i = 0;
+// var typingInterval = setInterval(function () {
+//   if (i < content.length) {
+//     element.innerHTML += content.charAt(i);
+//     i++;
 
-    // Check for <br> tags and add a line break
-    if (content.charAt(i) === "<" && content.substring(i, i + 4) === "<br>") {
-      element.innerHTML += "<br> <br>";
-      i += 4;
-    }
+//     // Check for <br> tags and add a line break
+//     if (content.charAt(i) === "<" && content.substring(i, i + 4) === "<br>") {
+//       element.innerHTML += "<br> <br>";
+//       i += 4;
+//     }
+//   } else {
+//     clearInterval(typingInterval);
+//   }
+// }, 50);
+
+// Function to disable mouse scroll wheel
+function disableScrollWheel(event) {
+  event = event || window.event;
+
+  if (event.preventDefault) {
+    event.preventDefault();
   } else {
-    clearInterval(typingInterval);
+    event.returnValue = false; // For older browsers
   }
-}, 50);
+}
 
-// Smooth Scrolling
-
-function smoothScroll(event) {
-  // event.preventDefault();
-  const targetId = event.target.getAttribute("href");
-  const targetElement = document.querySelector(targetId);
-  targetElement.scrollIntoView({ behavior: "smooth" });
+// Attach the event listener to the document
+if (window.addEventListener) {
+  // For modern browsers
+  window.addEventListener("wheel", disableScrollWheel, { passive: false });
+} else {
+  // For older versions of IE
+  window.attachEvent("onwheel", disableScrollWheel);
 }

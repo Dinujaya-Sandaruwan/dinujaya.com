@@ -23,7 +23,7 @@
     <div class="container">
       <!-- Landing Page -->
       <section class="landing" id="one">
-        <div class="layout-text">
+        <div class="layout-text" id="landingText">
           <article class="my-text">
             <h2 class="hi animatedElement">Hi There,</h2>
             <h1 class="name animatedElement">I'm Dinujaya S...</h1>
@@ -36,15 +36,16 @@
               Using <span class="technologies"></span>
             </h2>
             <div class="landing-buttons">
-              <a href="#tow" onclick="smoothScroll(event)">
-                <button class="btn-learn animatedElement">
-                  <ion-icon
-                    class="landing-btn-icon"
-                    name="caret-down-circle-outline"
-                  ></ion-icon>
-                  Learn More
-                </button>
-              </a>
+              <button
+                class="btn-learn animatedElement"
+                onclick="scrollToAbout()"
+              >
+                <ion-icon
+                  class="landing-btn-icon"
+                  name="caret-down-circle-outline"
+                ></ion-icon>
+                Learn More
+              </button>
               <button class="btn-order animatedElement">
                 <ion-icon
                   class="landing-btn-icon"
@@ -55,28 +56,26 @@
             </div>
           </article>
         </div>
-        <div class="layout-image">
-          <img
-            src="images/me_black.jpg"
-            alt=""
-            class="me-image opacityAnimation"
-          />
+        <div class="layout-image" id="landingImage">
+          <img src="images/me_black.jpg" alt="" class="me-image" />
         </div>
       </section>
       <!-- About me -->
       <section class="about" id="tow">
-        <div class="about-image about-image-desktop right-animation">
+        <div class="about-image about-image-desktop" id="aboutLeft">
           <img src="images/about_me.jpg" alt="" />
         </div>
-        <div class="about-text left-animation">
+        <div class="about-text" id="aboutRight">
           <article>
             <h2 class="about-title animatedElement">ABOUT ME</h2>
 
-            <span class="animatedElement">
-              <ion-icon name="link" class="icon"></ion-icon>
-              <h2 class="toolkit-title">My Toolkit For Development</h2>
-            </span>
-            <hr />
+            <div class="animatedElement">
+              <span>
+                <ion-icon name="link" class="icon"></ion-icon>
+                <h2 class="toolkit-title">My Toolkit For Development</h2>
+              </span>
+              <hr />
+            </div>
 
             <div class="my-toolkit">
               <a href="" class="toolkitImage">
@@ -151,37 +150,29 @@
               <a href="" class="toolkitImage">
                 <img src="images/toolkit/wordpress.png" alt="" />
               </a>
-            </div>
 
-            <span>
-              <ion-icon name="link" class="icon"></ion-icon>
-              <h2 class="toolkit-title">My Toolkit For Designing</h2>
-            </span>
-            <hr />
-
-            <div class="my-toolkit">
-              <a href="" class="designkitImage">
+              <a href="" class="toolkitImage">
                 <img src="images/toolkit/design/photoshop.png" alt="" />
               </a>
-              <a href="" class="designkitImage">
+              <a href="" class="toolkitImage">
                 <img src="images/toolkit/design/illustrator.png" alt="" />
               </a>
-              <a href="" class="designkitImage">
+              <a href="" class="toolkitImage">
                 <img src="images/toolkit/design/premiere-pro.png" alt="" />
               </a>
-              <a href="" class="designkitImage">
+              <a href="" class="toolkitImage">
                 <img src="images/toolkit/design/after-effects.png" alt="" />
               </a>
-              <a href="" class="designkitImage">
+              <a href="" class="toolkitImage">
                 <img src="images/toolkit/design/animate.png" alt="" />
               </a>
-              <a href="" class="designkitImage">
+              <a href="" class="toolkitImage">
                 <img src="images/toolkit/design/figma.png" alt="" />
               </a>
-              <a href="" class="designkitImage">
+              <a href="" class="toolkitImage">
                 <img src="images/toolkit/design/xd.png" alt="" />
               </a>
-              <a href="" class="designkitImage">
+              <a href="" class="toolkitImage">
                 <img src="images/toolkit/design/canva.png" alt="" />
               </a>
             </div>
