@@ -69,6 +69,7 @@ const scrollToAbout = () => {
   document.getElementById("landingImage").classList.add("slide-out-bottom");
   setTimeout(() => {
     document.getElementById("one").style.display = "none";
+    document.getElementById("tow").style.display = "flex";
   }, 1000);
   setTimeout(() => {
     document.getElementById("landingText").classList.remove("slide-out-bottom");
@@ -79,6 +80,11 @@ const scrollToAbout = () => {
 
   document.getElementById("aboutLeft").classList.add("bounce-in-left");
   document.getElementById("aboutRight").classList.add("bounce-in-right");
+  document.getElementById("toolkitImages").style.display = "none";
+
+  setTimeout(() => {
+    document.getElementById("toolkitImages").style.display = "flex";
+  }, 1000);
 };
 
 // For Peragraph

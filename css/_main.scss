@@ -36,31 +36,39 @@ body {
   scroll-snap-align: start;
   /* border: 1px solid red; */
   background-color: black;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-// .container section:nth-child(1) {
-//   background: #000000;
-// }
-// .container section:nth-child(2) {
-//   background: #ffffff;
-// }
-// .container section:nth-child(3) {
-//   background: #000000;
-// }
-// .container section:nth-child(4) {
-//   background: #ffffff;
-// }
-
-@media (max-width: 982px) {
-  .container {
-    position: relative;
-    display: block;
-    height: auto;
-    transform: none !important;
-    overflow-x: auto;
-    scroll-snap-type: none;
-  }
+.container section:nth-child(1) {
+  // background: #000000;
+  z-index: 1;
 }
+.container section:nth-child(2) {
+  // background: #ffffff;
+  z-index: 2;
+}
+.container section:nth-child(3) {
+  // background: #000000;
+  z-index: 3;
+}
+.container section:nth-child(4) {
+  // background: #ffffff;
+  z-index: 4;
+}
+
+// @media (max-width: 982px) {
+//   .container {
+//     position: relative;
+//     display: block;
+//     height: auto;
+//     transform: none !important;
+//     overflow-x: auto;
+//     scroll-snap-type: none;
+//   }
+// }
 
 // Selection COlor
 
