@@ -1,0 +1,208 @@
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 1122px)";
+$media-mobile: "only screen and (max-width : 982px)";
+$media-mobile-sm: "only screen and (max-width : 600px)";
+
+.about {
+  display: flex;
+  justify-content: center;
+  color: black;
+
+  div {
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .about-image {
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+  .about-image-mobile {
+    display: none;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px 0px 30px;
+    background-color: white;
+
+    article {
+      overflow-y: scroll;
+      min-height: 98vh;
+    }
+
+    .about-title {
+      text-align: center;
+      margin-top: 5vh;
+      font-size: 5rem;
+      font-weight: 800;
+
+      animation-delay: 2.2s;
+    }
+
+    .wanna-know {
+      background-color: black;
+      width: 100%;
+      padding: 15px;
+      color: white;
+      font-weight: 700;
+      border-radius: 10px;
+      // margin-top: 25px;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      button {
+        padding: 5px;
+        border: none;
+        background-color: rgb(248, 118, 118);
+        color: white;
+        border-radius: 10px;
+        width: 15%;
+        height: 40px;
+        transition-duration: 350ms;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgb(207, 93, 93);
+      }
+    }
+
+    .wanna-know-1 {
+      animation-delay: 11000ms;
+    }
+    .wanna-know-2 {
+      animation-delay: 0ms;
+      display: none;
+      margin-top: 15px;
+    }
+
+    .about-pera {
+      font-weight: 500;
+      text-align: justify;
+      color: rgb(71, 71, 71);
+      font-family: "Nanum Gothic Coding", monospace;
+      line-height: 1.5;
+      font-size: 16px;
+
+      display: none;
+
+      background-color: rgb(209, 209, 209);
+      color: rgb(0, 0, 0);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 9px gray inset;
+    }
+
+    div {
+      animation-delay: 2.3s;
+      height: auto;
+      width: 100%;
+      span {
+        display: flex;
+        align-items: center;
+        margin-top: 2vh;
+
+        .toolkit-title {
+          font-size: 1.2rem;
+        }
+
+        .icon {
+          margin-right: 5px;
+          font-size: 1.3rem;
+          transform: rotate(-45deg);
+        }
+      }
+
+      hr {
+        color: gray;
+        margin: 5px 0px 5px 0px;
+      }
+    }
+    .my-toolkit {
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      padding-bottom: 20px;
+      justify-content: center;
+      width: 100%;
+
+      img {
+        width: 2vw;
+        height: auto;
+        margin: 5px;
+        transition-duration: 300ms;
+        filter: grayscale(50%);
+      }
+
+      a {
+        @for $i from 1 through 40 {
+          &:nth-child(#{$i}) {
+            animation-delay: (200ms * ($i - 1) + 2.5s);
+          }
+        }
+      }
+      img:hover {
+        transform: scale(1.1);
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
+
+@media #{$media-mobile} {
+  .about {
+    display: flex;
+    flex-direction: column;
+    div {
+      width: 100vw;
+    }
+
+    .about-image-desktop {
+      display: none;
+    }
+
+    @media #{$media-mobile-sm} {
+      .about-image-mobile {
+        display: block;
+      }
+    }
+
+    .about-text {
+      height: auto;
+
+      .about-title {
+        margin-top: 2vh;
+        font-size: 4rem;
+      }
+
+      p.about-pera {
+        font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        text-align: justify;
+        color: rgb(71, 71, 71);
+        font-size: 0.9rem;
+      }
+
+      span {
+        .toolkit-title {
+          font-size: 1rem;
+        }
+      }
+
+      .my-toolkit {
+        img {
+          width: 4vw;
+        }
+      }
+    }
+  }
+}

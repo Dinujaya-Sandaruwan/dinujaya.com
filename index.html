@@ -5,38 +5,230 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Dinujaya Sandaruwan</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Open+Sans:wght@400;500;600;700;800&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="dist/index.css" />
   </head>
   <body>
-    <div
-      class="container"
-      data-0="transform:translateX(0%);"
-      data-3000="transform:translateX(-300%);"
-    >
-      <section>
-        <div class="content">
-          <h1>Secton One</h1>
+    <div class="container">
+      <!-- Landing Page -->
+      <section class="landing" id="one">
+        <div class="layout-text" id="landingText">
+          <article class="my-text">
+            <h2 class="hi animatedElement">Hi There,</h2>
+            <h1 class="name animatedElement">I'm Dinujaya S...</h1>
+            <p class="animatedElement">
+              a Highly Skilled full-stack Developer & Designer with a Flair for
+              Innovation and a Passion for Building Extraordinary Software & web
+              Solutions!
+            </p>
+            <h2 class="technologies-text animatedElement">
+              Using <span class="technologies"></span>
+            </h2>
+            <div class="landing-buttons">
+              <button
+                class="btn-learn animatedElement"
+                onclick="scrollToAbout()"
+              >
+                <ion-icon
+                  class="landing-btn-icon"
+                  name="caret-down-circle-outline"
+                ></ion-icon>
+                Learn More
+              </button>
+              <button class="btn-order animatedElement">
+                <ion-icon
+                  class="landing-btn-icon"
+                  name="briefcase-outline"
+                ></ion-icon>
+                Hire Me
+              </button>
+            </div>
+          </article>
+        </div>
+        <div class="layout-image" id="landingImage">
+          <img src="images/me_black.jpg" alt="" class="me-image" />
         </div>
       </section>
-      <section>
-        <div class="content">
-          <h1>Secton Tow</h1>
+      <!-- About me -->
+      <section class="about" id="tow">
+        <div class="about-image about-image-desktop" id="aboutLeft">
+          <img src="images/about_me.jpg" alt="" />
+        </div>
+        <div class="about-text" id="aboutRight">
+          <article>
+            <h2 class="about-title animatedElement">ABOUT ME</h2>
+
+            <div class="animatedElement">
+              <span>
+                <ion-icon name="link" class="icon"></ion-icon>
+                <h2 class="toolkit-title">My Toolkit For Development</h2>
+              </span>
+              <hr />
+            </div>
+
+            <div class="my-toolkit">
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/html.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/css-3.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/sass.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/js.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/php.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/sql-server.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/node-js.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/git.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/github.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/github-desktop.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/react.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/python.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/selenium.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/c-sharp.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/electron.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/bootstrap.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/chakra-ui.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/material-ui.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/firebase.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/mongodb.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/postman.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/vscode.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/visual-studio.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/wordpress.png" alt="" />
+              </a>
+
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/design/photoshop.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/design/illustrator.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/design/premiere-pro.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/design/after-effects.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/design/animate.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/design/figma.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/design/xd.png" alt="" />
+              </a>
+              <a href="" class="toolkitImage">
+                <img src="images/toolkit/design/canva.png" alt="" />
+              </a>
+            </div>
+
+            <div class="wanna-know wanna-know-1" id="wannaKnow">
+              <p>Do you wanna know more about my story?</p>
+              <button onclick="aboutTyping('pera')">Yes</button>
+            </div>
+
+            <p class="about-pera" id="pera">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              maxime molestias nisi voluptas dolorem officia numquam asperiores
+              quae consequuntur eligendi deserunt dolorum nulla suscipit
+              pariatur quisquam aperiam eveniet fugit tempora, fuga dignissimos.
+              Molestiae doloremque, consequuntur voluptate possimus id, atque
+              ipsam sunt expedita perspiciatis ut labore eveniet necessitatibus
+              adipisci! Aliquam, consequatur.
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              maxime molestias nisi voluptas dolorem officia numquam asperiores
+              quae consequuntur eligendi deserunt dolorum nulla suscipit
+              pariatur quisquam aperiam eveniet fugit tempora, fuga dignissimos.
+              Molestiae doloremque.
+            </p>
+
+            <div class="wanna-know wanna-know-2" id="wannaKnow2">
+              <p>It's time to see my projects. Will you come with me?</p>
+              <button onclick="scrollProjects()">Yes</button>
+            </div>
+          </article>
+        </div>
+        <div class="about-image about-image-mobile">
+          <img src="images/about_me.jpg" alt="" />
         </div>
       </section>
-      <section>
-        <div class="content">
-          <h1>Secton Three</h1>
-        </div>
-      </section>
-      <section>
-        <div class="content">
-          <h1>Secton Four</h1>
-        </div>
-      </section>
+
+      <section></section>
+      <section></section>
     </div>
-    <script type="text/javascript" src="./js/skrollr.js"></script>
-    <script type="text/javascript">
-      var s = skrollr.init();
-    </script>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
   </body>
 </html>
