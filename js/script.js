@@ -70,7 +70,8 @@ const aboutTyping = (id) => {
   document.getElementById("wannaKnow").style.display = "none";
 
   let i = 0;
-  let typingInterval = setInterval(function () {
+
+  const typeCharacter = () => {
     if (i < content.length) {
       element.innerHTML += content.charAt(i);
       i++;
@@ -80,11 +81,14 @@ const aboutTyping = (id) => {
         element.innerHTML += "<br> <br>";
         i += 4;
       }
+
+      setTimeout(typeCharacter, 20);
     } else {
-      clearInterval(typingInterval);
-      document.getElementById("wannaKnow2").style.display = "flex"; // Set display none after typing animation
+      document.getElementById("wannaKnow2").style.display = "flex";
     }
-  }, 20);
+  };
+
+  typeCharacter();
 };
 
 // Scroll to Project Page
@@ -92,9 +96,10 @@ const scrollProjects = () => {
   document.getElementById("aboutLeft").classList.add("slide-out-left");
   document.getElementById("aboutRight").classList.add("slide-out-right");
 
+  document.getElementById("three").style.display = "flex";
+  document.getElementById("tow").style.background = "transparent";
   setTimeout(() => {
     document.getElementById("tow").style.display = "none";
-    document.getElementById("three").style.display = "flex";
   }, 1000);
 };
 

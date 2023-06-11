@@ -1,11 +1,12 @@
 $media-desktop: "only screen and (max-width : 1024px)";
 $media-tablet: "only screen and (max-width : 1122px)";
-$media-mobile: "only screen and (max-width : 982px)";
+$media-mobile: "only screen and (max-width : 1000px)";
 $media-mobile-sm: "only screen and (max-width : 750px)";
 
 .projects {
   width: 100vw;
   display: flex;
+  display: none;
   overflow-y: scroll;
   overflow: hidden;
 
@@ -18,8 +19,28 @@ $media-mobile-sm: "only screen and (max-width : 750px)";
     justify-content: center;
     align-items: center;
 
+    h3 {
+      position: absolute;
+      left: 2vw;
+      bottom: 3vh;
+      font-family: cursive;
+      font-weight: 400;
+      animation-delay: 5400ms;
+
+      span {
+        color: var(--main-color);
+        cursor: pointer;
+      }
+    }
+
+    @media #{$media-mobile} {
+      h3 {
+        display: none;
+      }
+    }
+
     .hex-menu {
-      // border: 2pxs solid red;
+      // border: 2pxs solid var(--main-color);
       width: 750px;
       height: 365px;
       position: relative;
@@ -43,41 +64,41 @@ $media-mobile-sm: "only screen and (max-width : 750px)";
     .hexagon-item:nth-child(1) {
       top: 20px;
       left: 20px;
-      animation-delay: 100ms;
+      animation-delay: 1100ms;
     }
     .hexagon-item:nth-child(2) {
       top: 20px;
       left: 189.7px;
-      animation-delay: 300ms;
+      animation-delay: 1300ms;
     }
     .hexagon-item:nth-child(3) {
       top: 20px;
       left: 359.7px;
-      animation-delay: 500ms;
+      animation-delay: 1500ms;
     }
     .hexagon-item:nth-child(4) {
       top: 20px;
       left: 529.7px;
-      animation-delay: 700ms;
+      animation-delay: 1700ms;
     }
     .hexagon-item:nth-child(5) {
       top: 167px;
       left: 105px;
-      animation-delay: 900ms;
+      animation-delay: 1900ms;
     }
     .hexagon-item:nth-child(6) {
       top: 167px;
       left: 275px;
-      animation-delay: 1100ms;
+      animation-delay: 2100ms;
     }
     .hexagon-item:nth-child(7) {
       top: 167px;
       left: 445px;
-      animation-delay: 1300ms;
+      animation-delay: 2300ms;
     }
     .hexagon-item:hover {
       z-index: 100;
-      animation-delay: 1400ms;
+      animation-delay: 2400ms;
     }
 
     @media #{$media-mobile-sm} {
@@ -87,7 +108,7 @@ $media-mobile-sm: "only screen and (max-width : 750px)";
       }
 
       .hex-menu {
-        // border: 2px solid red;
+        // border: 2px solid var(--main-color);
         width: 750px;
         height: auto;
         margin-top: 30px;
@@ -127,7 +148,7 @@ $media-mobile-sm: "only screen and (max-width : 750px)";
     }
     .hexagon-item:hover .hex-item div::before,
     .hexagon-item:hover .hex-item div::after {
-      background-color: #ff0037;
+      background-color: var(--main-color);
     }
     .hexagon-item:hover .hex-content svg {
       -webkit-transform: scale(0.97);
@@ -139,7 +160,7 @@ $media-mobile-sm: "only screen and (max-width : 750px)";
 
     .hexagon-item:hover {
       .icon {
-        color: red;
+        color: var(--main-color);
       }
     }
 
@@ -345,7 +366,7 @@ $media-mobile-sm: "only screen and (max-width : 750px)";
       width: 100vw;
       margin-bottom: -100px;
 
-      // border: 2px solid red;
+      // border: 2px solid var(--main-color);
     }
 
     .projects-image {
