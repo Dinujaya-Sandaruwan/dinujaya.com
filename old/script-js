@@ -1,0 +1,30 @@
+// Scroll animation
+
+const scrollAnimation = (
+  animationIn,
+  animationOut,
+  elementClass,
+  delay = null
+) => {
+  const obServer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      // console.log(entry);
+      if (entry.isIntersecting) {
+        delay && (entry.target.style.animationDelay = `${delay}ms`);
+        entry.target.classList.remove(animationOut);
+        entry.target.classList.add(animationIn);
+      } else {
+        entry.target.classList.remove(animationIn);
+        entry.target.classList.add(animationOut);
+      }
+    });
+  });
+
+  document
+    .querySelectorAll(`.${elementClass}`)
+    .forEach((el) => obServer.observe(el));
+};
+
+scrollAnimation("fade-in-bottom", "fade-out-bottom", "animatedElement");
+scrollAnimation("fade-in-bottom", "fade-out-bottom", "toolkitImage");
+scrollAnimation("flicker-in-1", "fade-out-bottom", "wanna-know");
