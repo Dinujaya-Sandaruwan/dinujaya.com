@@ -58,6 +58,18 @@ const scrollToAbout = async () => {
   }, 1000);
 };
 
+// Scrolling to contact
+
+const scrollContact = () => {
+  document.getElementById("four").style.display = "flex";
+  document.getElementById("contactForm").classList.add("slide-in-right");
+  document.getElementById("contactImage").classList.add("slide-in-left");
+
+  setTimeout(() => {
+    document.getElementById("three").style.display = "none";
+  }, 3000);
+};
+
 // For Peragraph
 
 // About Typing
@@ -121,4 +133,15 @@ if (window.addEventListener) {
 } else {
   // For older versions of IE
   window.attachEvent("onwheel", disableScrollWheel);
+}
+
+// For Contact Page
+
+function sendLetter() {
+  document.getElementById("sent").classList.add("sent");
+
+  setTimeout(() => {
+    document.getElementById("result-message").style.display = "block";
+    document.getElementById("result-message").classList.add("fade-in-bottom");
+  }, 2000);
 }

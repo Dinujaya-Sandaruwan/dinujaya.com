@@ -1,7 +1,11 @@
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 1122px)";
 $media-mobile: "only screen and (max-width : 982px)";
+$media-mobile-sm: "only screen and (max-width : 480px)";
 
 :root {
   --main-color: rgb(248, 118, 118);
+  --main-color-dark: rgb(224, 68, 68);
 }
 
 html {
@@ -12,7 +16,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   color: white;
   font-family: "Open Sans", sans-serif;
 }
@@ -56,11 +60,11 @@ body {
 }
 .container section:nth-child(3) {
   // background: #000000;
-  z-index: 2;
+  z-index: 1;
 }
 .container section:nth-child(4) {
   // background: #ffffff;
-  z-index: 1;
+  z-index: 2;
 }
 
 // @media (max-width: 982px) {
