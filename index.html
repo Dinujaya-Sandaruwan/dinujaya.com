@@ -21,8 +21,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nanum+Gothic+Coding&family=Open+Sans:wght@400;500;600;700;800&family=Ubuntu:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gideon+Roman&family=Nanum+Gothic+Coding&family=Open+Sans:wght@400;500;600;700;800&family=Ubuntu:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -453,16 +455,59 @@
               </a>
             </div>
           </article>
-          <h3 class="slide-in-blurred-bl">
+          <h3 class="fade-in-bottom">
             The best thing about me is I am 24 hours avalable. So
-            <span>Contact Me</span>
+            <span onclick="scrollContact()">Contact Me</span>
           </h3>
         </div>
         <div class="projects-image">
-          <img src="./images/projects-me.jpg" alt="" />
+          <img src="./images/projects_me.jpg" alt="" />
         </div>
       </section>
-      <!-- <section></section> -->
+
+      <section class="contact-section" id="four">
+        <div class="contact-image" id="contactImage">
+          <img src="./images/contact_me.jpg" alt="" />
+        </div>
+        <div class="contact-form" id="contactForm">
+          <div class="for-contact-form fade-in-bottom">
+            <div class="" id="sent">
+              <article class="letter">
+                <div class="side">
+                  <h1>Contact me</h1>
+                  <p>
+                    <textarea placeholder="Your message"></textarea>
+                  </p>
+                </div>
+                <div class="side">
+                  <p>
+                    <input type="text" placeholder="Your name" />
+                  </p>
+                  <p>
+                    <input type="email" placeholder="Your email" />
+                  </p>
+                  <p>
+                    <button onclick="sendLetter()">Send</button>
+                  </p>
+                </div>
+              </article>
+              <div class="envelope front"></div>
+              <div class="envelope back"></div>
+            </div>
+            <p class="result-message centered" id="result-message">
+              Thank you for your message
+            </p>
+          </div>
+          <span class="back-to-top fade-in-bottom">
+            <a href="">
+              <ion-icon name="chevron-up-circle-outline"></ion-icon
+            ></a>
+          </span>
+          <div class="footer slide-in-bottom">
+            &copy; Dinujaya Sandaruwan. All rights resived
+          </div>
+        </div>
+      </section>
     </div>
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
