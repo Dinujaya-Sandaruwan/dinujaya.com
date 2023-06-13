@@ -7,6 +7,76 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
   display: flex;
   // display: none;
 
+  // @media #{$media-mobile} {
+  //   display: flex !important;
+  // }
+
+  .play-video-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 80px;
+    animation-delay: 5500ms;
+    color: gray;
+    cursor: pointer;
+    transition-duration: 350ms;
+
+    @media #{$media-mobile} {
+      display: none;
+    }
+
+    .play-icon {
+      animation: shake 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite both;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+      animation-delay: 6s;
+    }
+  }
+  @keyframes shake {
+    5%,
+    45% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    10%,
+    40% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    15%,
+    25%,
+    35% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    20%,
+    30% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  .play-video-btn:hover {
+    color: white;
+  }
+
+  .intro-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.884);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
   .layout-text {
     background-color: rgb(0, 0, 0);
     height: 100vh;
@@ -83,6 +153,21 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           border: 3px solid rgb(248, 118, 118);
           background-color: rgb(248, 118, 118);
           color: white;
+
+          @media #{$media-mobile} {
+            display: none;
+          }
+        }
+        .btn-watch {
+          animation-delay: 3000ms;
+          border: 3px solid rgb(248, 118, 118);
+          background-color: rgb(248, 118, 118);
+          color: white;
+          display: none;
+
+          @media #{$media-mobile} {
+            display: inline;
+          }
         }
 
         .btn-order {
@@ -162,7 +247,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 
       .my-text {
         .name {
-          font-size: 2.5rem;
+          font-size: 2.2rem;
         }
       }
 
@@ -173,7 +258,27 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       width: 100%;
       display: flex;
       justify-content: center;
+      align-items: start;
       overflow: hidden;
+      height: auto;
+
+      img {
+        width: 80%;
+        height: auto;
+      }
     }
   }
 }
+
+// @media #{$media-tablet} {
+//   .landing {
+//     display: flex;
+
+//     .layout-text {
+//       display: flex !important;
+//     }
+//     .layout-image {
+//       display: block !important;
+//     }
+//   }
+// }

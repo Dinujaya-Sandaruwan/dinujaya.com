@@ -35,10 +35,11 @@ let typed = new Typed(".technologies", {
 
 // Scrolling to About
 
-const scrollToAbout = async () => {
+const scrollToAbout = () => {
   document.getElementById("landingText").classList.add("slide-out-bottom");
   document.getElementById("landingImage").classList.add("slide-out-bottom");
-  await setTimeout(() => {
+  document.getElementById("videoBtn").style.display = "none";
+  setTimeout(() => {
     document.getElementById("one").style.display = "none";
     document.getElementById("tow").style.display = "flex";
   }, 500);
@@ -49,12 +50,29 @@ const scrollToAbout = async () => {
   //     .classList.remove("slide-out-bottom");
   // }, 2000);
 
-  document.getElementById("aboutLeft").classList.add("bounce-in-left");
-  document.getElementById("aboutRight").classList.add("bounce-in-right");
+  // document.getElementById("aboutLeft").classList.add("bounce-in-left");
+  // document.getElementById("aboutRight").classList.add("bounce-in-right");
+  document.getElementById("aboutLeft").classList.add("slide-in-left");
+  document.getElementById("aboutRight").classList.add("slide-in-right");
+
   document.getElementById("toolkitImages").style.display = "none";
 
   setTimeout(() => {
     document.getElementById("toolkitImages").style.display = "flex";
+  }, 1000);
+};
+
+// Scroll to Project Page
+const scrollProjects = () => {
+  document.getElementById("aboutLeft").classList.remove("slide-in-left");
+  document.getElementById("aboutRight").classList.remove("slide-in-right");
+  document.getElementById("aboutLeft").classList.add("slide-out-left");
+  document.getElementById("aboutRight").classList.add("slide-out-right");
+
+  document.getElementById("three").style.display = "flex";
+  document.getElementById("tow").style.background = "transparent";
+  setTimeout(() => {
+    document.getElementById("tow").style.display = "none";
   }, 1000);
 };
 
@@ -94,25 +112,13 @@ const aboutTyping = (id) => {
         i += 4;
       }
 
-      setTimeout(typeCharacter, 20);
+      setTimeout(typeCharacter, 1);
     } else {
       document.getElementById("wannaKnow2").style.display = "flex";
     }
   };
 
   typeCharacter();
-};
-
-// Scroll to Project Page
-const scrollProjects = () => {
-  document.getElementById("aboutLeft").classList.add("slide-out-left");
-  document.getElementById("aboutRight").classList.add("slide-out-right");
-
-  document.getElementById("three").style.display = "flex";
-  document.getElementById("tow").style.background = "transparent";
-  setTimeout(() => {
-    document.getElementById("tow").style.display = "none";
-  }, 1000);
 };
 
 // Function to disable mouse scroll wheel
@@ -127,21 +133,117 @@ const scrollProjects = () => {
 // }
 
 // Attach the event listener to the document
-if (window.addEventListener) {
-  // For modern browsers
-  window.addEventListener("wheel", disableScrollWheel, { passive: false });
-} else {
-  // For older versions of IE
-  window.attachEvent("onwheel", disableScrollWheel);
-}
+// if (window.addEventListener) {
+//   // For modern browsers
+//   window.addEventListener("wheel", disableScrollWheel, { passive: false });
+// } else {
+//   // For older versions of IE
+//   window.attachEvent("onwheel", disableScrollWheel);
+// }
 
 // For Contact Page
 
 function sendLetter() {
   document.getElementById("sent").classList.add("sent");
+  document.getElementById("sendLetter").style.display = "none";
 
   setTimeout(() => {
     document.getElementById("result-message").style.display = "block";
     document.getElementById("result-message").classList.add("fade-in-bottom");
+    startWhatsAppChat();
+    document.getElementById("sendLetter").style.display = "inline";
   }, 2000);
+
+  setTimeout(() => {
+    startWhatsAppChat();
+    document.getElementById("sendLetter").style.display = "inline";
+  }, 4000);
 }
+
+// Intro video display none
+
+window.addEventListener("DOMContentLoaded", function () {
+  var article = document.getElementById("introVideo");
+  var iframe = article.querySelector("iframe");
+
+  article.addEventListener("click", function (event) {
+    if (event.target !== iframe) {
+      article.style.display = "none";
+
+      document.getElementById("one").removeAttribute("style");
+      document.getElementById("tow").removeAttribute("style");
+      document.getElementById("three").removeAttribute("style");
+      document.getElementById("four").removeAttribute("style");
+
+      stopYouTubeVideo();
+    }
+  });
+
+  function stopYouTubeVideo() {
+    iframe.src = iframe.src;
+  }
+});
+
+// Intro video display
+
+const showIntro = () => {
+  document.getElementById("introVideo").style.display = "flex";
+
+  document.getElementById("one").style.height = "100vh";
+  document.getElementById("tow").style.display = "none";
+  document.getElementById("three").style.display = "none";
+  document.getElementById("four").style.display = "none";
+};
+
+// Open Whatsapp
+
+function startWhatsAppChat() {
+  var phoneNumber = "+94764588828";
+  var name = document.getElementById("contactName").value;
+  var message = document.getElementById("contactMessage").value;
+
+  // Format the WhatsApp message
+  var whatsappMessage = "Hello, let's chat!";
+  if (name.trim() !== "" || message.trim() !== "") {
+    whatsappMessage = "Hi";
+    if (name.trim() !== "") {
+      whatsappMessage += ", my name is " + name.trim();
+    }
+    if (message.trim() !== "") {
+      whatsappMessage += "\n\n" + message.trim();
+    }
+  }
+
+  // Encode the WhatsApp message
+  var encodedMessage = encodeURIComponent(whatsappMessage);
+
+  // Create the WhatsApp chat link
+  var link = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
+
+  // Open the link in a new tab or redirect the current page
+  // window.open(link, "_blank");
+  window.location.href = link;
+}
+
+// Send Email
+
+document
+  .getElementById("sendEmailButton")
+  .addEventListener("click", function () {
+    // Retrieve values from input fields or any other necessary data
+    var recipient = "info.dinujaya@gmail.com";
+    var subject = "Hello, Dinujaya";
+    var body = "Let's talk";
+
+    // Construct the email URL for Gmail
+    var emailUrl =
+      "https://mail.google.com/mail/?view=cm&to=" +
+      recipient +
+      "&su=" +
+      encodeURIComponent(subject) +
+      "&body=" +
+      encodeURIComponent(body);
+
+    // Open Gmail in a new tab
+    window.open(emailUrl, "_blank");
+  });
