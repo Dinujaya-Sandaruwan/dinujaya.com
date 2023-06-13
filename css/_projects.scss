@@ -1,6 +1,6 @@
 $media-desktop: "only screen and (max-width : 1024px)";
 $media-tablet: "only screen and (max-width : 1122px)";
-$media-mobile: "only screen and (max-width : 1000px)";
+$media-mobile: "only screen and (max-width : 982px)";
 $media-mobile-sm: "only screen and (max-width : 750px)";
 
 .projects {
@@ -9,6 +9,10 @@ $media-mobile-sm: "only screen and (max-width : 750px)";
   display: none;
   overflow-y: scroll;
   overflow: hidden;
+
+  @media #{$media-mobile} {
+    display: flex;
+  }
 
   .projects-menu {
     min-width: 60vw;
