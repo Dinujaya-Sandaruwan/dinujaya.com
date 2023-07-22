@@ -83,8 +83,8 @@ $media-mobile-sm: "only screen and (max-width : 600px)";
       animation-delay: 10050ms;
     }
     .wanna-know-2 {
-      animation-delay: 0ms;
-      display: none;
+      animation-delay: 1000ms;
+      // display: none;
       margin: auto;
       margin-top: 15px;
       margin-bottom: 25px;
@@ -102,7 +102,7 @@ $media-mobile-sm: "only screen and (max-width : 600px)";
       font-size: 16px;
       margin-top: -20px;
 
-      display: none;
+      // display: none;
 
       // background-color: rgb(209, 209, 209);
       color: rgb(0, 0, 0);

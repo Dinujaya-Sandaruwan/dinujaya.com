@@ -1290,8 +1290,7 @@ body {
   animation-delay: 10050ms;
 }
 .about .about-text .wanna-know-2 {
-  animation-delay: 0ms;
-  display: none;
+  animation-delay: 1000ms;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 25px;
@@ -1305,7 +1304,6 @@ body {
   line-height: 1.5;
   font-size: 16px;
   margin-top: -20px;
-  display: none;
   color: rgb(0, 0, 0);
   padding: 20px;
 }
