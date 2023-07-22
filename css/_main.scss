@@ -50,6 +50,18 @@ body {
   left: 0;
 }
 
+@media #{$media-mobile} {
+  body {
+    height: auto;
+    overflow-y: scroll;
+  }
+
+  .container section {
+    min-height: auto;
+    position: static;
+  }
+}
+
 .container section:nth-child(1) {
   // background: #000000;
   z-index: 4;

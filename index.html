@@ -4,27 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Dinujaya Sandaruwan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta
+      name="description"
+      content="Welcome to the portfolio of Dinujaya Sandaruwan, a skilled web developer proficient in HTML, CSS, SCSS, SASS, JavaScript, TypeScript, PHP, SQL, Node.js, Git, GitHub, GitHub Desktop, React, Python, Selenium, C#, Electron, Bootstrap, Chakra UI, Material UI, Firebase, MongoDB, Postman API testing, VSCode, and WordPress. Explore my projects and services, and get in touch for collaborations."
+    />
+
+    <meta
+      name="keywords"
+      content="Dinujaya Sandaruwan, web developer, portfolio, HTML, CSS, JavaScript, projects, services, react, react developer, wordpress, dinujaya, dinujaya s, convert psd to css"
+    />
+    <meta name="author" content="Dinujaya Sandaruwan" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="shortcut icon" type="image/jpg" href="images/faviocn.png" />
+    <title>Dinujaya Sandaruwan - Developer Portfolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gideon+Roman&family=Nanum+Gothic+Coding&family=Open+Sans:wght@400;500;600;700;800&family=Ubuntu:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Delicious+Handrawn&family=Gideon+Roman&family=Nanum+Gothic+Coding&family=Open+Sans:wght@400;500;600;700;800&family=Ubuntu:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -61,6 +59,10 @@
                 ></ion-icon>
                 Learn More
               </button>
+              <button class="btn-watch fade-in-bottom" onclick="showIntro()">
+                <ion-icon name="play-circle-outline"></ion-icon>
+                Watch Intro
+              </button>
               <button class="btn-order fade-in-bottom">
                 <ion-icon
                   class="landing-btn-icon"
@@ -72,13 +74,37 @@
           </article>
         </div>
         <div class="layout-image" id="landingImage">
-          <img src="images/me_black.jpg" alt="" class="me-image" />
+          <img
+            src="images/me_black.jpg"
+            alt="Dinujaya Sandaruwan"
+            class="me-image"
+          />
         </div>
+
+        <div class="play-video-btn fade-in-bottom" id="videoBtn">
+          <ion-icon
+            name="play-circle-outline"
+            class="play-icon"
+            onclick="showIntro()"
+          ></ion-icon>
+        </div>
+
+        <article class="intro-video" id="introVideo">
+          <iframe
+            width="969"
+            height="545"
+            src="https://www.youtube.com/embed/1gokns2iMFo"
+            title="Introducing Dinujaya&#39;s Portfolio Website"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </article>
       </section>
       <!-- About me -->
       <section class="about" id="tow">
         <div class="about-image about-image-desktop" id="aboutLeft">
-          <img src="images/about_me.jpg" alt="" />
+          <img src="images/about_me.jpg" alt="Dinujaya Sandaruwan" />
         </div>
         <div class="about-text" id="aboutRight">
           <article>
@@ -93,102 +119,198 @@
             </div>
 
             <div class="my-toolkit" id="toolkitImage fade-in-bottoms">
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/html.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/html.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/css-3.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/css-3.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/sass.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/sass.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/js.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/js.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/php.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/php.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/sql-server.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/sql-server.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/node-js.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/node-js.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/git.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/git.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/github.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/github.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/github-desktop.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/github-desktop.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/react.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/react.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/python.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/python.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/selenium.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/selenium.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/c-sharp.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/c-sharp.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/electron.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/electron.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/bootstrap.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/bootstrap.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/chakra-ui.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/chakra-ui.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/material-ui.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/material-ui.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/firebase.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/firebase.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/mongodb.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/mongodb.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/postman.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/postman.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/vscode.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/vscode.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/visual-studio.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/visual-studio.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/wordpress.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/wordpress.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
 
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/design/photoshop.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/design/photoshop.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/design/illustrator.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/design/illustrator.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/design/premiere-pro.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/design/premiere-pro.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/design/after-effects.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/design/after-effects.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/design/animate.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/design/animate.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/design/figma.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/design/figma.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/design/xd.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/design/xd.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
-              <a href="" class="toolkitImage fade-in-bottom">
-                <img src="images/toolkit/design/canva.png" alt="" />
+              <a class="toolkitImage fade-in-bottom">
+                <img
+                  src="images/toolkit/design/canva.png"
+                  alt="Dinujaya's Development Toolkit"
+                />
               </a>
             </div>
 
@@ -198,29 +320,46 @@
             </div>
 
             <p class="about-pera" id="pera">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              maxime molestias nisi voluptas dolorem officia numquam asperiores
-              quae consequuntur eligendi deserunt dolorum nulla suscipit
-              pariatur quisquam aperiam eveniet fugit tempora, fuga dignissimos.
-              Molestiae doloremque, consequuntur voluptate possimus id, atque
-              ipsam sunt expedita perspiciatis ut labore eveniet necessitatibus
-              adipisci! Aliquam, consequatur.
+              My name is Dinujaya, but you can call me Dinu. I recently
+              completed my high school advanced level exam and now I'm eager to
+              share my story as an aspiring web developer. During my time in
+              high school, I got the opportunity to be a member of the school's
+              ICT Crew. At that time, our team did a lot of work for the school,
+              such as building the school website and an automated register
+              marking system.
               <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              maxime molestias nisi voluptas dolorem officia numquam asperiores
-              quae consequuntur eligendi deserunt dolorum nulla suscipit
-              pariatur quisquam aperiam eveniet fugit tempora, fuga dignissimos.
-              Molestiae doloremque.
+
+              Being a part of the school's ICT Crew opened my eyes to the vast
+              world of web development. Among the various technologies I
+              explored, CSS resonated with me the most. I quickly developed a
+              deep passion for CSS (SCSS), mastering it to such a degree that my
+              fellow ICT Crew members recognized me as their go-to person for
+              CSS-related guidance and instruction. <br />
+
+              Around a year and a half ago, I discovered Mosh Hamedani, an
+              esteemed expert in web development. Motivated to expand my skills,
+              I invested in Mosh's premium courses, completing a comprehensive
+              range of topics, including JavaScript, TypeScript, React, Node,
+              Python, Docker, SQL, and GIT. This immersive learning experience
+              allowed me to confidently label myself as a Full Stack Web
+              Developer, equipped to tackle diverse challenges in this rapidly
+              evolving field. <br />
+
+              With my dedication and drive, I am excited to continue honing my
+              skills and exploring new opportunities as a web developer.
             </p>
 
             <div class="wanna-know wanna-know-2 flicker-in-1" id="wannaKnow2">
-              <p>It's time to see my projects. Will you come with me?</p>
+              <p>
+                It's time to see what I have accomplished. Will you come with
+                me?
+              </p>
               <button onclick="scrollProjects()">Yes</button>
             </div>
           </article>
         </div>
         <!-- <div class="about-image about-image-mobile">
-          <img src="images/about_me.jpg" alt="" />
+          <img src="images/about_me.jpg" alt="Dinujaya Sandaruwan" />
         </div> -->
       </section>
 
@@ -229,39 +368,42 @@
         <div class="projects-menu">
           <article class="hex-menu">
             <div class="hexagon-item">
-              <span class="for-animation">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <ion-icon name="code-working"></ion-icon>
-                    </span>
-                    <span class="title">Projects</span>
+              <div class="hex-item">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="hex-item">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <a
+                href="https://projects.dinujaya.com/"
+                target="_blank"
+                class="hex-content"
+              >
+                <span class="hex-content-inner">
+                  <span class="icon">
+                    <ion-icon name="code-working"></ion-icon>
                   </span>
-                  <svg
-                    viewBox="0 0 173.20508075688772 200"
-                    height="200"
-                    width="174"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
-                      fill="#1e2530"
-                    ></path>
-                  </svg>
-                </a>
-              </span>
+                  <span class="title">Projects</span>
+                </span>
+                <svg
+                  viewBox="0 0 173.20508075688772 200"
+                  height="200"
+                  width="174"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                    fill="#1e2530"
+                  ></path>
+                </svg>
+              </a>
             </div>
+
             <div class="hexagon-item">
               <div class="hex-item">
                 <div></div>
@@ -273,7 +415,11 @@
                 <div></div>
                 <div></div>
               </div>
-              <a class="hex-content">
+              <a
+                href="http://notes.dinujaya.com/"
+                target="_blank"
+                class="hex-content"
+              >
                 <span class="hex-content-inner">
                   <span class="icon">
                     <ion-icon name="book"></ion-icon>
@@ -305,39 +451,11 @@
                 <div></div>
                 <div></div>
               </div>
-              <a class="hex-content">
-                <span class="hex-content-inner">
-                  <span class="icon">
-                    <ion-icon name="calendar"></ion-icon>
-                  </span>
-                  <span class="title">Timeline</span>
-                </span>
-                <svg
-                  viewBox="0 0 173.20508075688772 200"
-                  height="200"
-                  width="174"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
-                    fill="#1e2530"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-            <div class="hexagon-item">
-              <div class="hex-item">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <div class="hex-item">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <a class="hex-content">
+              <a
+                href="https://github.com/Dinujaya-Sandaruwan"
+                target="_blank"
+                class="hex-content"
+              >
                 <span class="hex-content-inner">
                   <span class="icon">
                     <ion-icon name="logo-github"></ion-icon>
@@ -369,7 +487,11 @@
                 <div></div>
                 <div></div>
               </div>
-              <a class="hex-content">
+              <a
+                href="https://www.youtube.com/channel/UCVwXuCDRdBjzNUOWYOCO_xg"
+                target="_blank"
+                class="hex-content"
+              >
                 <span class="hex-content-inner">
                   <span class="icon">
                     <ion-icon name="logo-youtube"></ion-icon>
@@ -401,7 +523,47 @@
                 <div></div>
                 <div></div>
               </div>
-              <a class="hex-content">
+              <a
+                href="https://www.facebook.com/dinujaya.sandaruwan/"
+                target="_blank"
+                class="hex-content"
+              >
+                <span class="hex-content-inner">
+                  <span class="icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </span>
+                  <span class="title">FaceBook</span>
+                </span>
+                <svg
+                  viewBox="0 0 173.20508075688772 200"
+                  height="200"
+                  width="174"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                    fill="#1e2530"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="hexagon-item">
+              <div class="hex-item">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="hex-item">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/dinujaya-sandaruwan-23bb09201/"
+                target="_blank"
+                class="hex-content"
+              >
                 <span class="hex-content-inner">
                   <span class="icon">
                     <ion-icon name="logo-linkedin"></ion-icon>
@@ -433,12 +595,12 @@
                 <div></div>
                 <div></div>
               </div>
-              <a class="hex-content">
+              <a id="sendEmailButton" class="hex-content">
                 <span class="hex-content-inner">
                   <span class="icon">
-                    <ion-icon name="briefcase"></ion-icon>
+                    <ion-icon name="mail"></ion-icon>
                   </span>
-                  <span class="title">Hire Me</span>
+                  <span class="title">Email</span>
                 </span>
                 <svg
                   viewBox="0 0 173.20508075688772 200"
@@ -461,33 +623,47 @@
           </h3>
         </div>
         <div class="projects-image">
-          <img src="./images/projects_me.jpg" alt="" />
+          <img src="./images/projects_me.jpg" alt="Dinujaya Sandaruwan" />
         </div>
       </section>
 
       <section class="contact-section" id="four">
         <div class="contact-image" id="contactImage">
-          <img src="./images/contact_me.jpg" alt="" />
+          <img src="./images/contact_me.jpg" alt="Dinujaya Sandaruwan" />
         </div>
         <div class="contact-form" id="contactForm">
+          <div class="social-icons"></div>
           <div class="for-contact-form fade-in-bottom">
             <div class="" id="sent">
               <article class="letter">
                 <div class="side">
                   <h1>Contact me</h1>
                   <p>
-                    <textarea placeholder="Your message"></textarea>
+                    <textarea
+                      placeholder="Your message"
+                      id="contactMessage"
+                    ></textarea>
                   </p>
                 </div>
                 <div class="side">
                   <p>
-                    <input type="text" placeholder="Your name" />
+                    <input
+                      type="text"
+                      placeholder="Your name"
+                      id="contactName"
+                    />
                   </p>
                   <p>
-                    <input type="email" placeholder="Your email" />
+                    <input
+                      type="email"
+                      placeholder="Your email"
+                      id="contactEmail"
+                    />
                   </p>
                   <p>
-                    <button onclick="sendLetter()">Send</button>
+                    <button id="sendLetter" onclick="sendLetter()">
+                      Let's Chat
+                    </button>
                   </p>
                 </div>
               </article>
@@ -504,7 +680,7 @@
             ></a>
           </span>
           <div class="footer slide-in-bottom">
-            &copy; Dinujaya Sandaruwan. All rights resived
+            &copy; Dinujaya Sandaruwan. All rights reserved
           </div>
         </div>
       </section>

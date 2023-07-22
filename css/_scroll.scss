@@ -5,7 +5,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: orange;
+  background-color: var(--main-color);
+  border-radius: 5px;
 }
 
 /* Firefox */
@@ -15,7 +16,8 @@
 }
 
 ::-moz-scrollbar-thumb {
-  background-color: orange;
+  background-color: var(--main-color);
+  border-radius: 5px;
 }
 
 /* Internet Explorer and Edge */
@@ -27,7 +29,8 @@
 }
 
 *::-ms-scrollbar-thumb {
-  background-color: orange;
+  background-color: var(--main-color);
+  border-radius: 5px;
 }
 
 /* Standard scrollbar styling */
@@ -37,7 +40,7 @@
 /* Also, note that this will not work on Safari, which requires the Webkit prefix */
 * {
   scrollbar-width: thin;
-  scrollbar-color: orange transparent;
+  scrollbar-color: var(--main-color) transparent;
 }
 
 *::-webkit-scrollbar {
@@ -45,5 +48,6 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: orange;
+  background-color: var(--main-color);
+  border-radius: 5px;
 }
