@@ -33,12 +33,25 @@ let typed = new Typed(".technologies", {
   loop: true,
 });
 
+function hideFullMenu() {
+  const fullMenuElements = document.getElementsByClassName("full-menu");
+
+  // Convert the HTMLCollection to an array so we can use forEach
+  const fullMenuArray = Array.from(fullMenuElements);
+
+  // Set display none for each element
+  fullMenuArray.forEach(element => {
+    element.style.display = "none";
+  });
+}
+
 // Scrolling to About
 
 const scrollToAbout = () => {
   document.getElementById("landingText").classList.add("slide-out-bottom");
   document.getElementById("landingImage").classList.add("slide-out-bottom");
   document.getElementById("videoBtn").style.display = "none";
+  hideFullMenu()
   setTimeout(() => {
     document.getElementById("one").style.display = "none";
     document.getElementById("tow").style.display = "flex";

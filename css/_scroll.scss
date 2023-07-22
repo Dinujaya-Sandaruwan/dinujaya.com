@@ -1,7 +1,11 @@
 /* Webkit (Safari, Chrome, Opera) */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
   background-color: transparent;
+}
+::-webkit-scrollbar:hover {
+  width: 10px;
+ 
 }
 
 ::-webkit-scrollbar-thumb {
@@ -11,8 +15,12 @@
 
 /* Firefox */
 ::-moz-scrollbar {
-  width: 10px;
+  width: 5px;
   background-color: transparent;
+}
+::-moz-scrollbar:hover {
+  width: 10px;
+  
 }
 
 ::-moz-scrollbar-thumb {
@@ -25,6 +33,9 @@
 /* You can only change the color using the -ms- prefixed property */
 /* Transparent background is not supported */
 *::-ms-scrollbar {
+  width: 5px;
+}
+*::-ms-scrollbar:hover {
   width: 10px;
 }
 
@@ -44,6 +55,9 @@
 }
 
 *::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar:hover {
   width: 10px;
 }
 
